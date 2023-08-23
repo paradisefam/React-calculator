@@ -1,0 +1,36 @@
+/* Copyright (C), 2023-2024, Sara Echeverria (bl33h)
+     @author Sara Echeverria
+     FileName: App.css
+     @version: I
+     Creation: 07/05/2023
+     Last modification: 09/05/2023*/
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 6em;
+}
+
+.read-the-docs {
+  color: #888888;
+}

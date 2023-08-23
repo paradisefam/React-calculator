@@ -1,0 +1,214 @@
+/* Copyright (C), 2023-2024, Sara Echeverria (bl33h)
+     @author Sara Echeverria
+     FileName: index.css
+     @version: I
+     Creation: 07/05/2023
+     Last modification: 09/05/2023*/
+
+:root {
+  font-family: 'Roboto Slab', serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #e7e3ff; 
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+/* button config */
+button {
+  border-radius: 10px;
+  border: 50% solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: 'Roboto Slab', serif;
+  background-color: #ffffff;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+button:hover {
+  border-color: #ffffff;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+/* glow-on-hover effect for buttons */
+.glow-on-hover {
+  width: 115px;
+  height: 50px;
+  border: 20px;
+  outline: none;
+  color: #fff;
+  background: #BB6187;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+}
+
+.glow-on-hover-2 {
+  width: 115px;
+  height: 50px;
+  border: 20px;
+  outline: none;
+  color: #fff;
+  background: #0ba1b9;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+}
+
+.glow-on-hover:before {
+  content: '';
+  background: linear-gradient(45deg, #fbacce, #a6e3f9, #ffb915, #d1ff51, #5278f6, #d0a7fb, #ff83e4, #fb7373);
+  position: absolute;
+  top: -2px;
+  left:-2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  border-radius: 10px;
+}
+
+.glow-on-hover-2:before {
+  content: '';
+  background: linear-gradient(45deg, #fbacce, #a6e3f9, #ffb915, #d1ff51, #5278f6, #d0a7fb, #ff83e4, #fb7373);
+  position: absolute;
+  top: -2px;
+  left:-2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  border-radius: 10px;
+}
+
+.glow-on-hover:active {
+  color: #fff
+}
+
+.glow-on-hover-2:active {
+  color: #fff
+}
+
+.glow-on-hover:active:after {
+  background: transparent;
+}
+
+.glow-on-hover-2:active:after {
+  background: transparent;
+}
+
+.glow-on-hover:hover:before {
+  opacity: 1;
+}
+
+.glow-on-hover-2:hover:before {
+  opacity: 1;
+}
+
+.glow-on-hover:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #BB6187;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+.glow-on-hover-2:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #0ba1b9;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+@keyframes glowing {
+  0% { background-position: 0 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0 0; }
+}
+
+.result {
+  background-color: #ffffff;
+  font-size: 2.5em;
+  font-weight: 500;
+  font-family: 'Roboto Slab', serif;
+  height: 3rem;
+  width: 350px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 1rem;
+  margin-bottom: 20px;
+  border: 8px solid #753452;
+  border-radius: 10px;
+}
+
+/* colorful output text */
+.result span {
+  background-image: linear-gradient(to right, #355c7d, #5c65c0, #c06c84, #a5b216, #f67280);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.calculator-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffff;
+  border-radius: 10px;
+  margin: 2px auto;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  width: 400px;
+  height: 550px;
+  border: 8px solid #753452;
+}
